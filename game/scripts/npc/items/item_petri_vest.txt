@@ -1,0 +1,173 @@
+"item_petri_vest"
+{
+  "BaseClass"           "item_datadriven"
+  "ID"              "1516"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_petri_vest"
+
+  "ItemCost"            "10"
+  "ItemShopTags"          "armor"
+  "ItemQuality"         "component"
+  "ItemAliases"         "vest"
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_armor"      "2"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_petri_vest_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%bonus_armor"
+      }
+    }
+  }
+}
+
+"item_petri_supervest"
+{
+  "BaseClass"           "item_datadriven"
+  "ID"              "1900"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_petri_supervest"
+
+  "ItemCost"            "250"
+  "ItemShopTags"          "armor"
+  "ItemQuality"         "component"
+  "ItemAliases"         "supervest"
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_armor"      "20"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_petri_supervest_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%bonus_armor"
+      }
+    }
+  }
+}
+
+"item_petri_supermegavest"
+{
+  "BaseClass"           "item_datadriven"
+  "ID"              "1901"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_petri_supermegavest"
+
+  "ItemCost"            "600"
+  "ItemShopTags"          "armor"
+  "ItemQuality"         "component"
+  "ItemAliases"         "supermegavest"
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_armor"      "50"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_petri_supermegavest_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%bonus_armor"
+      }
+    }
+  }
+}
+
+"item_petri_superthing"
+{
+  "BaseClass"           "item_datadriven"
+  "ID"              "1530"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "Model"             "models/props_gameplay/red_box.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_item.vpcf"
+  "AbilityTextureName"      "item_petri_superthing"
+
+  "ItemCost"            "2400"
+  "ItemShopTags"          "armor"
+  "ItemQuality"         "component"
+  "ItemAliases"         "superthing"
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_armor"      "150"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_item_petri_superthing_datadriven"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%bonus_armor"
+      }
+    }
+  }
+}
+
+"item_recipe_petri_superthing"
+{
+  "BaseClass"           "item_datadriven"
+  "ID"              "1531"
+  "Model" "models/props_gameplay/recipe.mdl"
+  "AbilityTextureName"      "item_recipe"
+
+  "ItemCost"            "1800"
+  "ItemShopTags"          ""
+
+  "ItemRecipe"          "1"
+  "ItemResult"          "item_petri_superthing"
+  "ItemRequirements"
+  {
+    "01"            "item_petri_supermegavest"
+  }
+}

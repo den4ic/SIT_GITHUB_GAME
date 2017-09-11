@@ -1,0 +1,64 @@
+"petri_upgrade_gold_tower"
+{
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "BaseClass"           "ability_datadriven"
+  "AbilityTextureName"      "petri_upgrade_gold_tower"
+  "AbilityCastAnimation"      "ACT_DOTA_DISABLED"
+
+  "AbilityCastPoint"        "0.0"
+  
+  "AbilityGoldCost"       "5 10 15 30 60 100 200 300"
+
+  "AbilityManaCost"       "0"
+  
+  "AbilityChannelTime"      "1.0"
+  "AbilityUpgradeGoldCost"    "0"
+
+  "MaxLevel"            "9"
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "food_cost"        "2 2 4 6 10 11 13 15"
+    }
+    "02"
+    { 
+        "var_type"  "FIELD_INTEGER"
+        "lumber_cost" "5000 7500 10000 15000 20000 25000 30000 40000"
+    }
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StartUpgrading"
+    }
+  }
+
+  "OnChannelInterrupted"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StopUpgrading"
+    }
+  }
+
+  "OnChannelSucceeded"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "units/gold_tower.lua"
+      "Function"        "Upgrade"
+    }
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "OnUpgradeSucceeded"
+    }
+  }
+}

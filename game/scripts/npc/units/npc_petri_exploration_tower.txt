@@ -1,0 +1,34 @@
+"npc_petri_exploration_tower"
+{
+  "BaseClass"         "npc_dota_creature"
+  "Model"           "models/props_structures/wooden_sentry_tower001.vmdl"
+  "ModelScale"                "0.8"
+  "Level"           "1"
+
+  "AbilityLayout"       "4"
+  "Ability1"          "petri_exploration_tower_explore_world"
+  "Ability2"          "petri_empty2"
+  "Ability3"          "petri_empty3"
+  "Ability4"          "petri_empty4"
+  
+  "ArmorPhysical"       "25"     
+  "MagicalResistance"       "0"     
+  
+  "AttackCapabilities"    "DOTA_UNIT_CAP_NO_ATTACK"    
+
+  "BoundsHullName"      "DOTA_HULL_SIZE_SMALL"      
+
+  "MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"     
+  "MovementSpeed"       "0"   
+  "MovementTurnRate"      "0.0"   
+  "FollowRange"       "0"   
+  
+  "StatusHealth"        "1000"     
+  "StatusHealthRegen"     "0"     
+  
+  "TeamName"          "DOTA_TEAM_BADGUYS"      
+  "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+  
+  "VisionDaytimeRange"    "400"   
+  "VisionNighttimeRange"    "400"   
+}

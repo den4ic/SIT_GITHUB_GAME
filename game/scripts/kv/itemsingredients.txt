@@ -1,0 +1,72 @@
+"itemsingredients" //Если цена айтема нужна не в голде или ресурсе, а в айтемах. К сожалению айтемы нужны с зарядами, иначе не будет работать. (я это просто еще не исправил)
+{
+	"item_wood_damage"
+	{
+		"item_woods"		"5"
+	}
+	"item_wea"
+	{
+		"item_woods"		"10"
+		"item_iron"			"5"
+	}
+	"item_fishing_rod"
+	{
+		"item_woods"		"5"
+		"item_tendon"		"2"
+	}
+	"item_scalp"
+	{
+		"item_bone"			"2"
+	}
+	"item_axe_tree"
+	{
+		"item_woods"		"3"
+		"item_iron"			"2"
+	}
+	"item_axe_iron"
+	{
+		"item_woods"		"3"
+		"item_iron"			"1"
+	}
+	"item_northern_wolf_shield"
+	{
+		"item_skin_wolf"	"3"
+		"item_tendon"		"2"
+	}
+	"item_shield_of_heaven"
+	{
+		"item_skin_wolf"	"3"
+		"item_tendon"		"2"
+	}
+	"item_rough_bear_armor"
+	{
+		"item_skin_bear"	"3"
+		"item_tendon"		"2"
+	}
+	"item_warm_bear_armor"
+	{
+		"item_skin_bear"	"3"
+		"item_tendon"		"2"
+	}
+	"item_bow"
+	{
+		"item_woods"		"10"
+		"item_tendon"		"2"
+	}
+	"item_quiver"
+	{
+		"item_woods"		"10"
+	}
+	"item_sword_damage"
+	{		
+	"item_iron"				"25"
+	}
+	"item_bone_sharpening_easy"
+	{		
+		"item_bone"			"1"
+	}
+	"item_bone_sharpening_heavy"
+	{		
+		"item_bone"			"1"
+	}
+}

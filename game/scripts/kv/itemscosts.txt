@@ -1,0 +1,64 @@
+"itemscosts"
+{
+	"item_wood_damage"
+	{
+		"howmany"	"1"
+	}
+	"item_wea"
+	{
+		"howmany"	"1"
+	}
+	"item_fishing_rod"
+	{
+		"howmany"	"1"
+	}
+	"item_scalp"
+	{
+		//"gold"	"45"
+		"howmany"	"1"
+	}
+	"item_axe_tree"
+	{
+		"howmany"	"1"
+	}
+	"item_axe_iron"
+	{
+		"howmany"	"1"
+	}
+	"item_northern_wolf_shield"
+	{
+		"howmany"	"1"
+	}
+	"item_shield_of_heaven"
+	{
+		"howmany"	"1"
+	}
+	"item_rough_bear_armor"
+		{
+		"howmany"	"1"
+	}
+	"item_warm_bear_armor"
+	{
+		"howmany"	"1"
+	}
+	"item_bow"
+	{
+		"howmany"	"1"
+	}
+	"item_quiver"
+	{
+		"howmany"	"1"
+	}
+	"item_sword_damage"
+	{
+		"howmany"	"1"
+	}
+	"item_bone_sharpening_easy"
+	{
+		"howmany"	"1"
+	}
+	"item_bone_sharpening_heavy"
+	{
+		"howmany"	"1"
+	}
+}

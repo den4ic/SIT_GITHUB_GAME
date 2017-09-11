@@ -1,0 +1,87 @@
+"dota_shops"
+{
+	"consumables"
+	{
+	}
+
+	"attributes"
+	{
+		"item"		"item_running_boots"
+		"item"		"item_crown"
+	}
+
+	"weapons_armor"
+	{
+		"item"		"item_silencer"
+		"item"		"item_tentacle"
+		"item"		"item_wizard_heart"
+	    "item"		"item_stone_axe"
+        "item"      "item_divine_rapier_datadriven"
+        "item"      "item_divine_shiva_datadriven"
+        "item"      "item_vitality_booster_datadriven" 
+        "item"      "item_reflex_dash"		
+	}
+	
+	"misc"
+	{
+		
+		"item"		"item_mana_potion_small"
+		"item"		"item_mana_potion"
+		"item"		"item_mana_potion_big"
+		"item"		"item_health_potion_small"		
+		"item"		"item_health_potion"
+		"item"		"item_health_potion_big" 
+        "item"		"item_meat" 
+		"item"		"item_cooked_meat" 
+		"item"		"item_wood" 		
+	}	
+	
+	// Level 1 - Green Recipes
+	"basics"
+	{
+		
+	}
+
+	// Level 2 - Blue Recipes
+	"support"
+	{
+		
+	}
+	
+	"magics"
+	{
+		
+	}
+	
+	// Level 3 - Purple Recipes
+	"defense"
+	{
+		
+	}
+	
+	"weapons"
+	{
+		
+	}
+	
+	// Level 4 - Orange / Orb / Artifacts
+	"artifacts"
+	{
+ 		
+	}
+
+	"sideshop1"
+	{
+		
+	}
+
+	"sideshop2"
+	{
+		
+	}
+	
+	"secretshop"
+	{
+		
+	}
+}

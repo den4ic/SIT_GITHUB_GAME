@@ -1,0 +1,57 @@
+"item_petri_kvn_fan_blink"
+{
+  "BaseClass"       "item_datadriven"
+  "ID"              "1501"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+  "AbilityTextureName"      "item_blink"
+
+  "precache"
+  {
+    "soundfile"   "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+  }
+
+  "ItemPermanent"         "0"
+
+  "AbilityCastPoint"        "0.0"
+
+  "AbilityCooldown"       "5.0"
+  
+  "AbilityManaCost"       "0"
+  
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "blink_range"     "2150"
+    }
+    
+    "02"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "min_blink_range"   "200"
+    }
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"  "scripts/vscripts/units/kvn_fan.lua"
+      "Function"    "Blink"
+      "Target"    "POINT"
+    }
+
+    "FireSound"
+    {
+      "EffectName"  "Hero_Antimage.Blink_out"
+      "Target"    "CASTER"
+    }
+
+    "FireSound"
+    {
+      "EffectName"  "Hero_Antimage.Blink_in"
+      "Target"    "CASTER"
+    }
+  }
+}

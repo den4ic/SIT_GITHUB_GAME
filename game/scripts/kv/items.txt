@@ -1,0 +1,21 @@
+"items"
+{
+	"craftmenu"
+	{
+		"1"		"item_wood_damage"	
+		"2"		"item_axe_iron"	 
+		"3"		"item_axe_tree"
+		"4"		"item_scalp"
+		"5"		"item_bone_sharpening_easy"
+		"6"		"item_bone_sharpening_heavy"
+		"7"		"item_wea" 
+		"8" 	"item_bow"
+		"9" 	"item_quiver"
+		"10"	"item_fishing_rod"	
+		"11" 	"item_sword_damage"
+		"12"	"item_northern_wolf_shield"
+		"13"	"item_shield_of_heaven"
+		"14"	"item_rough_bear_armor"
+		"15"	"item_warm_bear_armor"
+	}
+}

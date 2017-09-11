@@ -1,0 +1,561 @@
+"petri_upgrade_basic_tower"
+{
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "BaseClass"           "ability_datadriven"
+  "AbilityTextureName"      "petri_upgrade_basic_tower"
+
+  "AbilityCastAnimation"      "ACT_DOTA_DISABLED"
+
+  "AbilityCastPoint"        "0.0"
+
+  "MaxLevel"            "8"
+
+  "AbilityChannelTime"      "1.0 2.0 3.0 4.0 5.0 6.0 8.0"
+  "AbilityGoldCost"       "0 0 1 5 10 20 40"
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "lumber_cost"        "500 1500 4500 10000 17000 21000 28000"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack"        "14 25 67 99 140 200 400"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack_rate"        "20 40 50 60 70 90 120"
+    }
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StartUpgrading"
+    }
+  }
+
+  "OnChannelInterrupted"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StopUpgrading"
+    }
+  }
+  
+  "OnChannelSucceeded"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "units/tower.lua"
+      "Function"        "UpgradeBasic"
+    }
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "OnUpgradeSucceeded"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_attack_speed"
+    {
+      "Passive"  "0"
+      "IsHidden" "1"
+
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%attack_rate"
+      }
+    }
+  }
+}
+
+"petri_upgrade_elements_tower"
+{
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "BaseClass"           "ability_datadriven"
+  "AbilityTextureName"      "petri_upgrade_elements_tower"
+
+  "AbilityCastAnimation"      "ACT_DOTA_DISABLED"
+
+  "AbilityCastPoint"        "0.0"
+
+  "MaxLevel"            "2"
+
+  "AbilityChannelTime"      "2.0"
+  "AbilityGoldCost"       "0"
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "lumber_cost"        "1500"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack"        "16"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack_rate"        "20"
+    }
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StartUpgrading"
+    }
+  }
+
+  "OnChannelInterrupted"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StopUpgrading"
+    }
+  }
+  
+  "OnChannelSucceeded"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "units/tower.lua"
+      "Function"        "UpgradeElements"
+    }
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "OnUpgradeSucceeded"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_attack_speed"
+    {
+      "Passive"  "0"
+      "IsHidden" "1"
+
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%attack_rate"
+      }
+    }
+  }
+}
+
+"petri_upgrade_fire_tower"
+{
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "BaseClass"           "ability_datadriven"
+  "AbilityTextureName"      "petri_upgrade_fire_tower"
+
+  "AbilityCastAnimation"      "ACT_DOTA_DISABLED"
+
+  "AbilityCastPoint"        "0.0"
+
+  "MaxLevel"            "8"
+
+  "AbilityChannelTime"      "2.0 2.1 2.2 2.3 2.4 2.5 2.6"
+  "AbilityGoldCost"       "0 0 2 10 20 30 40"
+
+  "precache"
+  {
+    "particle"  "particles/econ/courier/courier_cluckles/courier_cluckles_ambient_rocket_explosion_flash_c.vpcf"
+  }
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "lumber_cost"        "2000 5000 10000 17000 20000 25000 34000"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack"        "32 55 91 180 210 240 260"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack_rate"        "10 15 20 30 40 50 60"
+    }
+    "04"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "chance"        "20 20 20 20 20 20 20"
+    }
+    "05"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "crit"        "300 300 300 300 300 300 300"
+    }
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StartUpgrading"
+    }
+  }
+
+  "OnChannelInterrupted"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StopUpgrading"
+    }
+  }
+  
+  "OnChannelSucceeded"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "units/tower.lua"
+      "Function"        "UpgradeFire"
+    }
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "OnUpgradeSucceeded"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_attack_speed"
+    {
+      "Passive"  "0"
+      "IsHidden" "1"
+
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%attack_rate"
+      }
+    }
+    "modifier_crits"
+    {
+      "Passive"  "0"
+
+      "IsHidden"   "1"
+      "OnAttackStart"
+      {
+        "Random"
+        {
+          "Chance" "%chance"
+          "OnSuccess"
+          {
+            "ApplyModifier"
+            {
+              "ModifierName" "creep_crit"
+              "Target"     "CASTER" 
+            }   
+          }
+        }
+      }
+    }
+    "creep_crit"
+    {
+      "Duration"  "1"
+      "IsHidden"  "1"
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"   "%crit"
+      }
+      
+      "OnAttackLanded"
+      {
+        "FireEffect"
+        {
+          "EffectName"     "particles/econ/courier/courier_cluckles/courier_cluckles_ambient_rocket_explosion_flash_c.vpcf"
+          "EffectAttachType"   "follow_origin"
+          "Target"       "TARGET"
+        } 
+        "RemoveModifier"
+        {
+          "ModifierName"    "creep_crit"
+          "Target"      "CASTER"  
+        }
+      }
+    }
+  }
+}
+
+"petri_upgrade_ice_tower"
+{
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "BaseClass"           "ability_datadriven"
+  "AbilityTextureName"      "petri_upgrade_ice_tower"
+
+  "AbilityCastAnimation"      "ACT_DOTA_DISABLED"
+
+  "AbilityCastPoint"        "0.0"
+
+  "MaxLevel"            "8"
+
+  "AbilityChannelTime"      "2.0 2.1 2.2 2.3 2.4 2.5 2.6"
+  "AbilityGoldCost"       "0 1 5 10 15 20 25"
+
+  "precache"
+  {
+    "particle"  "particles/status_fx/status_effect_frost.vpcf"
+    "particle"  "particles/items2_fx/skadi_projectile.vpcf"
+  }
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "lumber_cost"        "1000 2500 7000 11000 15000 20000 25000"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack"        "30 60 90 120 160 190 210"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack_rate"        "10 15 20 25 30 35 40"
+    }
+    "04"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "slow_rate"        "-15 -20 -25 -35 -40 -45 -50"
+    }
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StartUpgrading"
+    }
+  }
+
+  "OnChannelInterrupted"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StopUpgrading"
+    }
+  }
+  
+  "OnChannelSucceeded"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "units/tower.lua"
+      "Function"        "UpgradeIce"
+    }
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "OnUpgradeSucceeded"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_attack_speed"
+    {
+      "Passive"  "0"
+      "IsHidden" "1"
+
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%attack_rate"
+      }
+    }
+    "modifier_skadi"
+    {
+      "Passive"       "0"
+      "IsHidden"        "1"
+      
+      "Orb"
+      {
+        "Priority"        "DOTA_ORB_PRIORITY_ITEM"
+        "Label"         "DOTA_ORB_LABEL_SKADI"
+        "ProjectileName"    "particles/items2_fx/skadi_projectile.vpcf"
+        "CastAttack"      "0"
+      }
+
+      "OnOrbImpact"
+      {
+        "RunScript"
+        {
+          "ScriptFile"      "units/tower.lua"
+          "Function"        "modifier_skadi_on_orb_impact"
+          "ColdDurationMelee"   "4"
+          "ColdDurationRanged"  "4"
+        }
+      }
+    }
+    "modifier_skadi_cold_attack"
+    {
+      "Passive"       "0"
+      "IsHidden"        "0"
+      
+      "StatusEffectName"     "particles/status_fx/status_effect_frost.vpcf"
+      "StatusEffectPriority" "10"
+        
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%slow_rate"
+        "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"    "%slow_rate"
+      }
+    } 
+  }
+}
+
+"petri_upgrade_death_tower"
+{
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "BaseClass"           "ability_datadriven"
+  "AbilityTextureName"      "petri_upgrade_death_tower"
+
+  "AbilityCastAnimation"      "ACT_DOTA_DISABLED"
+
+  "AbilityCastPoint"        "0.0"
+
+  "MaxLevel"            "8"
+
+  "AbilityChannelTime"      "3.0 3.1 3.2 3.3 3.4 3.5 3.6"
+  "AbilityGoldCost"       "1 5 10 15 20 25 30"
+
+  "precache"
+  {
+    "particle"  "particles/items_fx/desolator_projectile.vpcf"
+  }
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "lumber_cost"        "3000 8000 15000 20000 30000 40000"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack"        "50 75 100 175 215 265 365"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "attack_rate"        "0 0 0 0 0 0 0"
+    }
+    "04"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "armor_reduction"        "-30 -70 -110 -150 -180 -210 -250"
+    }
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StartUpgrading"
+    }
+  }
+
+  "OnChannelInterrupted"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "StopUpgrading"
+    }
+  }
+  
+  "OnChannelSucceeded"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "units/tower.lua"
+      "Function"        "UpgradeDeath"
+    }
+    "RunScript"
+    {
+      "ScriptFile"      "internal/util.lua"
+      "Function"        "OnUpgradeSucceeded"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_attack_speed"
+    {
+      "Passive"  "0"
+      "IsHidden" "1"
+
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"    "%attack_rate"
+      }
+    }
+    "modifier_death_tower"
+    {
+      "Passive"     "0"
+      "IsHidden"      "1"
+      
+      "Orb"
+      {
+        "Priority"        "DOTA_ORB_PRIORITY_ITEM"
+        "ProjectileName"    "particles/items_fx/desolator_projectile.vpcf"
+        "CastAttack"      "0"
+      }
+
+      "OnOrbImpact"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_death_tower_corruption"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_death_tower_corruption"
+    {
+      "Duration"        "5"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor_reduction"
+      }
+    }
+  }
+}
